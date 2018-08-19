@@ -1,0 +1,113 @@
+// path
+$assets-path: '/assets/templates/';
+
+
+// resolution
+$large-screen: 1200px !default;
+$large-and-down: 'only screen and (max-width : #{$large-screen})' !default;
+$height-768px-and-down: 'only screen and (max-height : 768px)' !default;
+
+
+// colors
+$color1: #FFFFFF;
+$color2: #000000;
+$color3: #EEEEEE;
+$color4: #616161;
+$color5: #0070C9;
+$color6: #0BBAE0;
+$color7: #0B4AE0;
+$color8: #212121;
+
+
+// fonts
+@mixin SFProDisplay-Reg {
+    font-family: 'SF Pro Display';
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin SFProDisplay-Reg-It {
+    font-family: 'SF Pro Display';
+    font-weight: normal;
+    font-style: italic;
+}
+@mixin SFProDisplay-Lt {
+    font-family: 'SF Pro Display';
+    font-weight: 200;
+    font-style: normal;
+}
+@mixin SFProDisplay-Lt-It {
+    font-family: 'SF Pro Display';
+    font-weight: 200;
+    font-style: italic;
+}
+@mixin SFProDisplay-Bd {
+    font-family: 'SF Pro Display';
+    font-weight: bold;
+    font-style: normal;
+}
+@mixin SFProDisplay-Bd-It {
+    font-family: 'SF Pro Display';
+    font-weight: bold;
+    font-style: italic;
+}
+@mixin SFProDisplay-SBd{
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-style: normal;
+}
+@mixin SFProDisplay-SBd-It{
+    font-family: 'SF Pro Display';
+    font-weight: 600;
+    font-style: italic;
+}
+@mixin SFProDisplay-Thin{
+    font-family: 'SF Pro Display';
+    font-weight: 100;
+    font-style: normal;
+}
+@mixin SFProDisplay-Thin-It{
+    font-family: 'SF Pro Display';
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+//animation
+@mixin custom-flash{
+    @keyframes custom-flash {
+      from,
+      to {
+        opacity: 1;
+      }
+
+      25%,
+      75% {
+        opacity: 0;
+      }
+    }
+    animation-fill-mode: both;
+    animation-name: custom-flash;
+    animation-duration: .5s;
+
+}
+
+@mixin custom-pulse{
+    @keyframes custom-pulse {
+        to {
+            box-shadow: 0 0 0 25px rgba(232, 76, 61, 0);
+        }
+    }
+    // animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: custom-pulse;
+    animation-duration: 1.25s;
+
+}
+
+// @mixin custom-flash{
+//     @keyframes pulse {
+//         to {
+//             box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);
+//         }
+//     }
+// }
